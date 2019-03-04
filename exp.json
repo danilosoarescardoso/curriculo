@@ -17,4 +17,24 @@
         "cargo": "Web Developer e Criador de Conteúdo",
         "atribuicoes": "Criação de conteúdo e desenvolvimento de aplicações web. Responsável por criar posts semanais em blogs, aplicando SEO, palavras-chave e conceitos de call to action. Na área de desenvolvimento, programo interfaces web usando HTML, CSS, JavaScript e PHP no backend."
     }
+},
+
+{
+    "first":{
+        "linguagem": "PHP",
+        "tempo": "1 ano e meio",
+        "nivel": "Pleno"
+    },
+
+    "second": {
+        "linguagem": "JavaScript",
+        "tempo": "1 ano e meio",
+        "nivel": "Pleno"
+    },
+
+    "third": {
+        "linguagem": "MySQL, HTML e CSS",
+        "tempo": "1 ano e meio",
+        "nivel": "Pleno"
+    }
 }

@@ -1,72 +1,22 @@
+//funcao para fazer API requests
 function getJSON(url) {
-    var Httpreq = new XMLHttpRequest(); // a new request
+    let Httpreq = new XMLHttpRequest(); // a new request
     Httpreq.open("GET", url, false);
     Httpreq.send(null);
     return Httpreq.responseText;
-
 }
 
 let urlExperiencia = 'http://demo9624895.mockable.io/experiencia';
+let urlHabilidades = 'https://demo9624895.mockable.io/habilidades-tecnicas';
 
+let dadosHabilidades = JSON.parse(getJSON(urlHabilidades));
 let dadosExperiencia = JSON.parse(getJSON(urlExperiencia));
 
-
+//funcao para atualizar o front com os dados que vieram da API
 function loadData(element, data) {
     return document.getElementById(element).innerHTML = data;
 }
 
-// JavaScript Document
-var min = 12;
-var max = 32;
-
-function increaseFontSizeInternal(list) {
-    for (i = 0; i < list.length; i++) {
-        var s = 12;
-        if (list[i].style.fontSize) {
-            s = parseInt(list[i].style.fontSize.replace("px", ""));
-        }
-        if (s != max) {
-            s += 1;
-        }
-        list[i].style.fontSize = s + "px"
-    }
-}
-
-function increaseFontSize() {
-    var paragraph = document.getElementsByTagName('p');
-    increaseFontSizeInternal(paragraph);
-    var links = document.getElementsByTagName('a');
-    increaseFontSizeInternal(links);
-    var titles = document.getElementsByTagName("h3")
-    increaseFontSizeInternal(titles);
-    var subTitles = document.getElementById("subTitle")
-    increaseFontSizeInternal(subTitles);
-
-}
-
-function decreaseFontSizeInternal(list) {
-    for (i = 0; i < list.length; i++) {
-        var s = 12;
-        if (list[i].style.fontSize) {
-            s = parseInt(list[i].style.fontSize.replace("px", ""));
-        }
-        if (s != min) {
-            s -= 1;
-        }
-        list[i].style.fontSize = s + "px"
-    }
-}
-
-function decreaseFontSize() {
-    var paragraph = document.getElementsByTagName('p');
-    decreaseFontSizeInternal(paragraph);
-    var links = document.getElementsByTagName('a');
-    decreaseFontSizeInternal(links);
-    var titles = document.getElementsByTagName("h3")
-    decreaseFontSizeInternal(titles);
-    var subTitles = document.getElementById("subTitle")
-    decreaseFontSizeInternal(subTitles);
-}
 window.onload = function () {
     loadData('relevantTime1', dadosExperiencia.first.tempo);
     loadData('relevantPosition1', dadosExperiencia.first.empresa);
@@ -83,6 +33,18 @@ window.onload = function () {
     loadData('relevantCompany3', dadosExperiencia.third.cargo);
     loadData('relevantSkills3', dadosExperiencia.third.atribuicoes);
 
+    loadData('language1', dadosHabilidades.first.linguagem);
+    loadData('experience1', dadosHabilidades.first.tempo);
+    loadData('level1', dadosHabilidades.first.nivel);
+
+    loadData('language2', dadosHabilidades.second.linguagem);
+    loadData('experience2', dadosHabilidades.second.tempo);
+    loadData('level2', dadosHabilidades.second.nivel);
+
+    loadData('language3', dadosHabilidades.third.linguagem);
+    loadData('experience3', dadosHabilidades.third.tempo);
+    loadData('level3', dadosHabilidades.third.nivel);
+
     const nightMode = document.querySelector('#switch-shadow');
 
     // ao clicar mudaremos as cores
@@ -90,7 +52,58 @@ window.onload = function () {
         // adiciona a classe `night-mode` ao html
         document.documentElement.classList.toggle('night-mode');
     });
-
-
-
 };
+
+
+let min = 12;
+let max = 32;
+
+//funcao para aumentar o tamanho das letras 
+function increaseFontSizeInternal(list) {
+    for (i = 0; i < list.length; i++) {
+        let s = 12;
+        if (list[i].style.fontSize) {
+            s = parseInt(list[i].style.fontSize.replace("px", ""));
+        }
+        if (s != max) {
+            s += 1;
+        }
+        list[i].style.fontSize = s + "px"
+    }
+}
+
+function increaseFontSize() {
+    let paragraph = document.getElementsByTagName('p');
+    increaseFontSizeInternal(paragraph);
+    let links = document.getElementsByTagName('a');
+    increaseFontSizeInternal(links);
+    let titles = document.getElementsByTagName("h3")
+    increaseFontSizeInternal(titles);
+    let subTitles = document.getElementById("subTitle")
+    increaseFontSizeInternal(subTitles);
+
+}
+//funcao para diminuir o tamanho das letras 
+function decreaseFontSizeInternal(list) {
+    for (i = 0; i < list.length; i++) {
+        let s = 12;
+        if (list[i].style.fontSize) {
+            s = parseInt(list[i].style.fontSize.replace("px", ""));
+        }
+        if (s != min) {
+            s -= 1;
+        }
+        list[i].style.fontSize = s + "px"
+    }
+}
+
+function decreaseFontSize() {
+    let paragraph = document.getElementsByTagName('p');
+    decreaseFontSizeInternal(paragraph);
+    let links = document.getElementsByTagName('a');
+    decreaseFontSizeInternal(links);
+    let titles = document.getElementsByTagName("h3")
+    decreaseFontSizeInternal(titles);
+    let subTitles = document.getElementById("subTitle")
+    decreaseFontSizeInternal(subTitles);
+}

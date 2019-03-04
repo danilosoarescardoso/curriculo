@@ -6,7 +6,7 @@ function getJSON(url) {
     return Httpreq.responseText;
 }
 
-let urlExperiencia = 'http://demo9624895.mockable.io/experiencia';
+let urlExperiencia = 'https://demo9624895.mockable.io/experiencia';
 let urlHabilidades = 'https://demo9624895.mockable.io/habilidades-tecnicas';
 
 let dadosHabilidades = JSON.parse(getJSON(urlHabilidades));

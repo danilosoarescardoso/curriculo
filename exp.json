@@ -1,0 +1,20 @@
+{
+    "first": {
+        "tempo": "fev 2018 ~ jan 2019",
+        "empresa": "Estadão",
+        "cargo": "Web Developer",
+        "atribuicoes": "Resolução de chamados relacionados a desenvolvimento. Manutenção e desenvolvimento em PHP (Laravel), JavaScript (Ajax, JQuery, ECMA, React), HTML e CSS. Implementação de HTTPS, gestão de demandas usando JIRA e métodos ágeis, comunicação com suporte internacional (fornecedores espanhóis, ingleses, etc)"
+    },
+    "second": {
+        "tempo": "Ago 2016 ~ Fev 2017",
+        "empresa": "BMSIX",
+        "cargo": "Junior Site Reliability Engineer",
+        "atribuicoes": "Manutenção e suporte de sistemas alocados em plataformas de IaaS (AWS, Softlayer, Azure), monitoramento de sistemas web, desenvolvimento de scripts em Powershell, atendimento de clientes por e- mail e telefone"
+    },
+    "third": {
+        "tempo": "Mai 2017 ~ hoje",
+        "empresa": "Freelancer",
+        "cargo": "Web Developer e Criador de Conteúdo",
+        "atribuicoes": "Criação de conteúdo e desenvolvimento de aplicações web. Responsável por criar posts semanais em blogs, aplicando SEO, palavras-chave e conceitos de call to action. Na área de desenvolvimento, programo interfaces web usando HTML, CSS, JavaScript e PHP no backend."
+    }
+}
